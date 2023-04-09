@@ -1,5 +1,6 @@
 import React from 'react';
-import './Banner.css'
+import './Banner.css';
+import img from '../../assets/All Images/P3OLGJ1 copy 1.png'
 
 const Banner = () => {
     return (
@@ -26,7 +27,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className='banner-img ml-[400px] mt-56'>
-                    <img src="https://o.remove.bg/downloads/8164a71e-1cea-4afe-952e-b784dc954739/317631328_2092711031117006_8591427877146403769_n-removebg-preview.png" alt="" />
+                    <img src={img} alt="" />
                 </div>
             </div>
         </div>

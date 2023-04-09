@@ -7,7 +7,6 @@ const Home = () => {
         <div>
             <Header></Header>
             <Outlet></Outlet>
-            dfg
         </div>
     );
 };

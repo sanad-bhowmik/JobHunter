@@ -1,0 +1,19 @@
+.navMiddleText:hover {
+    background: -webkit-linear-gradient(#7E90FE, #9873FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navMiddleText {
+    font-size: 18px;
+}
+
+.nav-btn {
+    border: none;
+    font-size: 20px;
+    color: white;
+    height: 65px;
+    width: 190px;
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+    border-radius: 8px;
+}

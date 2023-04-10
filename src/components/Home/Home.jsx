@@ -4,6 +4,7 @@ import img from '../../assets/All Images/P3OLGJ1 copy 1.png'
 import { useLoaderData } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollar } from '@fortawesome/free-solid-svg-icons'
+import Header from '../Header/Header';
 
 const Home = () => {
     const [jobCategorys, setJobCategorys] = useState();
@@ -18,7 +19,8 @@ const Home = () => {
     // Feature jobs
     const featureData = useLoaderData();
     return (
-        <div>
+        <div className=''>
+            <Header></Header>
             <div className='container mx-auto mt-12'>
                 <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                     <div className="max-w-xl text-center sm:text-left">

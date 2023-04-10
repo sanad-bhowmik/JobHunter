@@ -35,7 +35,7 @@ const Header = () => {
                                 Applied Jobs
                             </Link>
                         </li>
-                        <li><Link className='navMiddleText'>Blog</Link></li>
+                        <li><Link className='navMiddleText' to="/blog">Blog</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

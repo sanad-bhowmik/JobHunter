@@ -1,0 +1,28 @@
+.chat-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .chat {
+    opacity: 0;
+    animation: chat-appear 0.5s ease-out forwards;
+  }
+  
+  .chat-start {
+    margin-right: auto;
+  }
+  
+  @keyframes chat-appear {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

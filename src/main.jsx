@@ -8,18 +8,22 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
-import FontPage from './components/FontPage/FontPage';
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <App></App>,
     children: [
       {
         path: "/",
-        element: <FontPage></FontPage>,
-        loader: () => fetch('JobCategory.json')
+        element: <Home></Home>,
+        loader: () => fetch('companys.json')
       },
+      
+      // {
+      //   path: "/",
+      //   element: <Jobfeatured></Jobfeatured>,
+      //   loader: () => fetch('generated.json'),
+      // },
       {
         path: '/statistics',
         element: <Statistics></Statistics>
@@ -30,6 +34,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

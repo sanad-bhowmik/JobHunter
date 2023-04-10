@@ -1,0 +1,29 @@
+.assignment{
+    background: -webkit-linear-gradient(#081eac, #dc0dbd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+.color1{color: #B3446C}
+.color2{color: #00FFFF}
+.color3{color: #FFD700}
+.color4{color: #008000}
+.color5{color: #FF69B4}
+.color6{color: #FFA07A}
+.color8{color: #40E0D0}
+ol {
+    list-style-type: decimal;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding-left: 20px;
+    line-height: 1.5;
+    
+  }
+  
+ 
+  

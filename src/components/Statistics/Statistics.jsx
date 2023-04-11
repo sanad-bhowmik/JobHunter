@@ -68,7 +68,7 @@ const Statistics = () => {
                         <YAxis dataKey="name" type="category" scale="band" />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="Marks" barSize={20} fill="#ff7300" />
+                        <Bar dataKey="Marks" barSize={20} fill="#081eac" />
                     </ComposedChart>
                 </div>
                 <div>

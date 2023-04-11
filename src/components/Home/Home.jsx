@@ -22,7 +22,6 @@ const Home = () => {
 
     return (
         <div className=''>
-            <Header></Header>
             <div className='container mx-auto mt-12'>
                 <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                     <div className="max-w-xl text-center sm:text-left">
@@ -57,7 +56,7 @@ const Home = () => {
                 <div className='grid md:grid-cols-4 gap-10 mt-4 md:text-start text-center md:px-0 p-10'>
                     {jobCategorys ? (
                         jobCategorys.map(category => (
-                            <div className="card w-[311px] h-[233px] bg-fuchsia-100">
+                            <div className="card w-[311px] h-[233px] bg-fuchsia-100 jobcategory">
                                 <div className="card-body" key={category.id}>
                                     <div className='job-cateImg'>
                                         <img className='h-[50px] w-[50px] mt-3 ml-2' src={category.img} alt="" />

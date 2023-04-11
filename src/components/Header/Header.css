@@ -17,3 +17,8 @@
     background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
     border-radius: 8px;
 }
+.navber li:active{
+    border: 4px solid salmon;
+    border-radius: 100px;
+   left: 2%;
+}

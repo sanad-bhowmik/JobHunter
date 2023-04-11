@@ -18,6 +18,8 @@ const Home = () => {
 
     // Feature jobs
     const featureData = useLoaderData();
+    const [showAllJobs, setShowAllJobs] = useState(false);
+
     return (
         <div className=''>
             <Header></Header>
@@ -76,7 +78,7 @@ const Home = () => {
                 <p className='text-center mt-5'>Explore thousands of  jobs opportunities with all the information you need. It's your Future</p>
                 <div className='md:grid md:grid-cols-2 mt-5 ml-36'>
                     {featureData ? (
-                        featureData.map(featureData => (
+                        featureData.slice(0, showAllJobs ? featureData.length : 4).map(featureData => (
                             <div className='max-w-lg bg-white rounded-sm overflow-hidden border border-gradient-to-r from-indigo-400 to-purple-600 mt-5 p-5 md:ml-10 md:mx-0 mx-auto'>
                                 <div className='px-6 py-4'>
                                     <div><img className='h-[60px] w-[117px]' src={featureData.CompanyLogo} alt="" /></div>
@@ -84,8 +86,8 @@ const Home = () => {
                                     <div className='mt-2 text-gray-500 dark:text-gray-400 text-sm'>
                                         <div className='text-xl text-gray-500'>{featureData.place}</div>
                                         <div className='flex mt-4 gap-3'>
-                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.jobTime}</p>
-                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.fulltime}</p>
+                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.Fullparttime[0]}</p>
+                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.Fullparttime[1]}</p>
                                         </div>
                                         <div className='flex mt-3'>
                                             <div className="text-gray-500 mr-4"><FontAwesomeIcon icon={faLocationDot} />{featureData.location}</div>
@@ -102,7 +104,7 @@ const Home = () => {
                         <p>Loading</p>
                     )}
                 </div>
-                <button className='nav-btn ml-[45%]'>See All Jobs</button>
+                <button className='nav-btn ml-[45%]' onClick={() => setShowAllJobs(!showAllJobs)}>See All Jobs</button>
             </section>
         </div>
     );

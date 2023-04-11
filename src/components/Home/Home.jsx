@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
 import img from '../../assets/All Images/P3OLGJ1 copy 1.png'
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollar } from '@fortawesome/free-solid-svg-icons'
 import Header from '../Header/Header';
@@ -85,15 +85,17 @@ const Home = () => {
                                     <div className='mt-2 text-gray-500 dark:text-gray-400 text-sm'>
                                         <div className='text-xl text-gray-500'>{featureData.place}</div>
                                         <div className='flex mt-4 gap-3'>
-                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.Fullparttime[0]}</p>
-                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.Fullparttime[1]}</p>
+                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.FulltimeJob}</p>
+                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.RemoteJob}</p>
                                         </div>
                                         <div className='flex mt-3'>
                                             <div className="text-gray-500 mr-4"><FontAwesomeIcon icon={faLocationDot} />{featureData.location}</div>
                                             <div className="text-gray-500"><FontAwesomeIcon icon={faDollar} />{featureData.salary}</div>
                                         </div>
                                         <div className='mt-2'>
-                                            <button className='nav-btn btn-sm btn-color border-0 rounded mt-6'>View Details</button>
+                                            <Link to={`/Jobdetails/${featureData.id}`}>
+                                                <button className='nav-btn btn-sm btn-color border-0 rounded mt-6'>View Details</button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

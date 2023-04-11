@@ -18,31 +18,31 @@ const Statistics = () => {
     const data = [
         {
             name: "A-01",
-            pv: 55,
+            Marks: 55,
         },
         {
             name: "A-02",
-            pv: 57,
+            Marks: 57,
         },
         {
             name: "A-03",
-            pv: 55,
+            Marks: 55,
         },
         {
             name: "A-04",
-            pv: 60,
+            Marks: 60,
         },
         {
             name: "A-05",
-            pv: 55,
+            Marks: 55,
         },
         {
             name: "A-06",
-            pv: 60,
+            Marks: 60,
         },
         {
             name: "A-07",
-            pv: 60,
+            Marks: 60,
         }
     ];
 
@@ -68,7 +68,7 @@ const Statistics = () => {
                         <YAxis dataKey="name" type="category" scale="band" />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="pv" barSize={20} fill="#ff7300" />
+                        <Bar dataKey="Marks" barSize={20} fill="#ff7300" />
                     </ComposedChart>
                 </div>
                 <div>

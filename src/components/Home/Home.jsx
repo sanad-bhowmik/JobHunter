@@ -79,7 +79,7 @@ const Home = () => {
                         featureData.map(featureData => (
                             <div className='max-w-lg bg-white rounded-sm overflow-hidden border border-gradient-to-r from-indigo-400 to-purple-600 mt-5 p-5 md:ml-10 md:mx-0 mx-auto'>
                                 <div className='px-6 py-4'>
-                                    <div><img className='h-[60px] w-[117px]' src={featureData.img} alt="" /></div>
+                                    <div><img className='h-[60px] w-[117px]' src={featureData.CompanyLogo} alt="" /></div>
                                     <div className='text-2xl font-bold text-black mt-4'>{featureData.Jobpost}</div>
                                     <div className='mt-2 text-gray-500 dark:text-gray-400 text-sm'>
                                         <div className='text-xl text-gray-500'>{featureData.place}</div>

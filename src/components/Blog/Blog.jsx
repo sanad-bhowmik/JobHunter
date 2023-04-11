@@ -12,7 +12,7 @@ const Blog = () => {
             <img src="https://static.vecteezy.com/system/resources/previews/010/353/285/original/colourful-google-logo-on-white-background-free-vector.jpg" alt="avatar" />
           </div>
         </div>
-        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-1:</span> when should we use context api?</div>
+        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-1:</span>When should you use context API?</div>
         <div className="chat-footer opacity-50">Delivered</div>
       </div>
       <div className="chat chat-end">
@@ -21,7 +21,7 @@ const Blog = () => {
             <img src="https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Logo.png" alt="avatar" />
           </div>
         </div>
-        <div className="chat-bubble mt-20 text-lg">Context API in React should be used when multiple components need to share data or state that is too complex to pass down through props.</div>
+        <div className="chat-bubble mt-20 text-lg">You should use Context API in React when you need to share data between components that are not directly connected through the component tree.</div>
         <div className="chat-footer opacity-50">Seen</div>
       </div>
     </div>
@@ -32,7 +32,7 @@ const Blog = () => {
             <img src="https://static.vecteezy.com/system/resources/previews/010/353/285/original/colourful-google-logo-on-white-background-free-vector.jpg" alt="avatar" />
           </div>
         </div>
-        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-1:</span> what is custom hook in react?</div>
+        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-2:</span> what is custom hook in react?</div>
         <div className="chat-footer opacity-50">Delivered</div>
       </div>
       <div className="chat chat-end">
@@ -52,7 +52,7 @@ const Blog = () => {
             <img src="https://static.vecteezy.com/system/resources/previews/010/353/285/original/colourful-google-logo-on-white-background-free-vector.jpg" alt="avatar" />
           </div>
         </div>
-        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-1:</span> What is useRef?</div>
+        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-3:</span> What is useRef?</div>
         <div className="chat-footer opacity-50">Delivered</div>
       </div>
       <div className="chat chat-end">
@@ -72,7 +72,7 @@ const Blog = () => {
             <img src="https://static.vecteezy.com/system/resources/previews/010/353/285/original/colourful-google-logo-on-white-background-free-vector.jpg" alt="avatar" />
           </div>
         </div>
-        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-1:</span>What is useMemo?</div>
+        <div className="chat-bubble bg-blue-500 text-lg"><span className='font-bold text-2xl'>Q-4:</span>What is useMemo?</div>
         <div className="chat-footer opacity-50">Delivered</div>
       </div>
       <div className="chat chat-end">

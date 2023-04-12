@@ -30,9 +30,7 @@ const Header = () => {
                         <li><Link to="/statistics" className='navMiddleText'>Statistics</Link></li>
                         
                         <li tabIndex={0}>
-                            <Link className='navMiddleText'>
-                                Applied Jobs
-                            </Link>
+                            <Link to="/appliedjob" className='navMiddleText'>Applied Jobs</Link>
                         </li>
                         <li><Link className='navMiddleText' to="/blog">Blog</Link></li>
                     </ul>

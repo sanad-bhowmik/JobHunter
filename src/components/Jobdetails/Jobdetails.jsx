@@ -15,29 +15,14 @@ const Jobdetails = () => {
         if (jobDatas) {
             const foundJob = jobDatas.find(job => job.id === parseInt(jobId));
             setJobDetails(foundJob);
-            localStorage.setItem('jobId', jobId);
         }
     }, [jobId, jobDatas]);
-
     if (!jobDetails) {
         return <div>Loading.....</div>
     }
-    // const handleApplyBtn = id => {
-    //     const storedIds = localStorage.getItem(id);
-    //     const updatedIds = storedIds ? `${storedIds}\n${id}` : id;
-    //     localStorage.setItem(`id${id}`, updatedIds);
-    //   };
     const handleApplyBtn = id => {
-        let storedIds = localStorage.getItem(`id${id}`);
-        let updatedIds = [];
-        
-        if (storedIds) {
-          updatedIds = JSON.parse(storedIds);
-        }
-        
-        updatedIds.push(id);
-        const timestamp = new Date().getTime();
-        localStorage.setItem(`${timestamp}`, JSON.stringify(updatedIds));
+        const jobCategory = jobCategorys.find(category => category.id === id);
+        console.log(jobCategory);
       };
       
     return (
@@ -68,12 +53,7 @@ const Jobdetails = () => {
                     <p className='md-5 mb-6 font-bold'><FontAwesomeIcon className='text-slate-400 border-solid border-2 border-purple-300 rounded-xl px-1' icon={faPhone} /><span>Phone:</span><span className='text-gray-500 pl-2'>{jobDetails.ContactInfo[0]} </span></p>
                     <p className='md-5 mb-6  font-bold'><FontAwesomeIcon className='text-slate-400 px-1' icon={faEnvelope} /><span>Email:</span><span className='text-gray-500 pl-2'>{jobDetails.ContactInfo[1]} </span></p>
                     <p className='md-5 mb-6 font-bold'><FontAwesomeIcon className='text-slate-400 px-1' icon={faLocationDot} /><span>Address:</span><span className='text-gray-500 pl-2'>{jobDetails.address} </span></p>
-                    {/* <button className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl'>Apply Now</button> */}
-                    <button
-                        className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl'
-                        onClick={() => handleApplyBtn(jobDetails.id)} >Apply Now
-                    </button>
-
+                    <button className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl'>Apply Now</button>
                 </div>
             </div>
         </section>

@@ -9,7 +9,7 @@ import Header from '../Header/Header';
 const Home = () => {
     const [jobCategorys, setJobCategorys] = useState();
     useEffect(() => {
-        fetch('JobCategory.json')
+        fetch('/JobCategory.json')
             .then(res => res.json())
             .then(data => setJobCategorys(data))
             .catch(error => console.log(error))
@@ -86,8 +86,8 @@ const Home = () => {
                                     <div className='mt-2 text-gray-500 dark:text-gray-400 text-sm'>
                                         <div className='text-xl text-gray-500'>{featureData.place}</div>
                                         <div className='flex mt-4 gap-3'>
-                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.FulltimeJob}</p>
-                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg'>{featureData.RemoteJob}</p>
+                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg text-purple-400'>{featureData.RemoteJob}</p>
+                                            <p className='border-solid border-2 border-violet-400 w-[60px] h-[40px] text-center pt-2 rounded-lg text-purple-400'>{featureData.FulltimeJob}</p>
                                         </div>
                                         <div className='flex mt-3'>
                                             <div className="text-gray-500 mr-4"><FontAwesomeIcon icon={faLocationDot} />{featureData.location}</div>

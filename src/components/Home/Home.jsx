@@ -4,7 +4,6 @@ import img from '../../assets/All Images/P3OLGJ1 copy 1.png'
 import { Link, useLoaderData } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollar } from '@fortawesome/free-solid-svg-icons'
-import Header from '../Header/Header';
 
 const Home = () => {
     const [jobCategorys, setJobCategorys] = useState();

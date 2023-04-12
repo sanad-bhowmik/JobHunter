@@ -5,6 +5,7 @@ import img1 from '../../assets/All Images/Vector.png';
 import img2 from '../../assets/All Images/Vector-1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollar, faCalendar, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { addToJob } from '../../utilities/addToJob'
 
 const Jobdetails = () => {
     const { jobId } = useParams();
@@ -20,12 +21,15 @@ const Jobdetails = () => {
     if (!jobDetails) {
         return <div>Loading.....</div>
     }
-
     const handleApplyNowClick = () => {
-        localStorage.setItem(jobDetails.id, JSON.stringify(jobDetails));
+        const existingJobs = JSON.parse(localStorage.getItem('jobs')) || [];
+        const updatedJobs = [...existingJobs, jobDetails];
+        localStorage.setItem('jobs', JSON.stringify(updatedJobs));
         // Redirect to the "Application" page or any other page where the stored data will be shown
         // You can use the useHistory hook from react-router-dom to achieve this.
       }
+      
+      
     return (
         <section className='z-10'>
             <div className='h-[400px] jobDetails bg-gray-100'>

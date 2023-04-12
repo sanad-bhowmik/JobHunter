@@ -9,6 +9,7 @@ import { addToJob } from '../../utilities/addToJob'
 
 const Jobdetails = () => {
     const { jobId } = useParams();
+    console.log(jobId);
     const jobDatas = useLoaderData();
     const [jobDetails, setJobDetails] = useState(null);
 
@@ -25,11 +26,8 @@ const Jobdetails = () => {
         const existingJobs = JSON.parse(localStorage.getItem('jobs')) || [];
         const updatedJobs = [...existingJobs, jobDetails];
         localStorage.setItem('jobs', JSON.stringify(updatedJobs));
-        // Redirect to the "Application" page or any other page where the stored data will be shown
-        // You can use the useHistory hook from react-router-dom to achieve this.
-      }
-      
-      
+    }
+    
     return (
         <section className='z-10'>
             <div className='h-[400px] jobDetails bg-gray-100'>
@@ -42,7 +40,7 @@ const Jobdetails = () => {
                     <p className='md-6 mb-10'><span className='font-bold'>Job Description:</span><span className='text-slate-600'>{jobDetails.jobDescription}</span></p>
                     <p className='md-6 '><span className='font-bold'>Job Responsibilities:</span>
                         {
-                            Array.isArray(jobDetails.jobResponsibility) && jobDetails.jobResponsibility.map(jobResponsibility => <span>{" " + jobResponsibility}</span>)
+                            Array.isArray(jobDetails.jobResponsibility) && jobDetails.jobResponsibility.map(jobResponsibility => <span ke>{" " + jobResponsibility}</span>)
                         }
                         <span className='text-slate-600'>{jobDetails.jobResponsibility}</span>
                     </p>

@@ -3,30 +3,29 @@ import ApplySingle from '../ApplySingle/ApplySingle';
 import { getStoredData } from '../../utilities/addToJob'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollar } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const AppliedJobs = () => {
     const [items, setItems] = useState([]);
-
 
     useEffect(() => {
         const storedItems = localStorage.getItem("jobs");
         const parsedItems = JSON.parse(storedItems);
         setItems(parsedItems || []);
     }, []);
-    console.log(items.length);
+    // console.log(items.length);
+
     return (
         <div>
-            <div className='flex'>
-                <button className="btn btn-outline btn-secondary">Button</button>
-                <button className="btn btn-outline btn-accent">Button</button>
+            <div className='flex ml-[80%] mt-[5%] gap-6'>
+                <button className="btn btn-outline btn-secondary">Onsite</button>
+                <button className="btn btn-outline btn-accent">Remote</button>
             </div>
             {items.map((item) => (
 
                 <div className='infoOfjob'>
-                    {/* <h1>hello: {item.place}</h1> */}
-
                     <div className="card border-solid border-2 border-stone-300 card-side bg-base-100 shadow-xl h-[300px] container mx-auto mb-6 mt-10">
-                        <figure className='company-img'><img className='h-[150px]  w-[180px] ml-11' src={item.CompanyLogo} alt="Movie" /></figure>
+                        <figure className='company-img'><img className='h-[150px]  w-[280px] ml-11' src={item.CompanyLogo} alt="Movie" /></figure>
                         <div className="card-body pl-10 ">
                             {item.Jobpost && <h1 className='jobpost text-3xl font-bold text-stone-950'>{item.Jobpost}</h1>}
                             {item.place && <h1 className='text-2xl text-stone-500'>{item.place}</h1>}
@@ -40,7 +39,10 @@ const AppliedJobs = () => {
                             </div>
                         </div>
                         <div className="card-actions mr-20 mt-[7%]">
-                            <button className="btn btn-primary nav-btn text-xl">View Details</button>
+                            <Link to={`/Jobdetails/${item.id}`}>
+                                <button className="btn btn-primary nav-btn text-xl">View Details</button>
+                            </Link>
+
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ const Home = () => {
     const [showAllJobs, setShowAllJobs] = useState(false);
 
     // Apply now  btn 
-   
+
     return (
         <div className=''>
             <div className='container mx-auto mt-12'>
@@ -35,7 +35,6 @@ const Home = () => {
                         <p className="mt-4 max-w-lg sm:text-xl sm:leading-relaxed text-gray-500">
                             Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.
                         </p>
-
                         <div className="mt-8 flex flex-wrap gap-4 text-center">
                             <a
                                 href="#"
@@ -45,11 +44,12 @@ const Home = () => {
                             </a>
                         </div>
                     </div>
-                    <div className='banner-img ml-[400px] mt-56'>
+                    <div className='banner-img ml-auto mt-12 lg:mt-0'>
                         <img src={img} alt="" />
                     </div>
                 </div>
             </div>
+
             {/* banner end */}
             <section className='mt-20 container mx-auto'>
                 <h1 className='text-center text-3xl font-bold'>Job Category List</h1>
@@ -78,7 +78,7 @@ const Home = () => {
                 <p className='text-center mt-5'>Explore thousands of  jobs opportunities with all the information you need. It's your Future</p>
                 <div className='md:grid md:grid-cols-2 mt-5 ml-36'>
                     {featureData ? (
-                        featureData.slice(0, showAllJobs ? featureData.length : 4).map(featureData => ( 
+                        featureData.slice(0, showAllJobs ? featureData.length : 4).map(featureData => (
                             <div className='max-w-lg bg-white rounded-sm overflow-hidden border border-gradient-to-r from-indigo-400 to-purple-600 mt-5 p-5 md:ml-10 md:mx-0 mx-auto'>
                                 <div className='px-6 py-4'>
                                     <div><img className='h-[60px] w-[117px]' src={featureData.CompanyLogo} alt="" /></div>

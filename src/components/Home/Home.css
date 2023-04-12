@@ -25,3 +25,16 @@
     background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
 
 }
+@media (max-width: 767px) {
+    .max-w-xl {
+      margin: auto;
+      text-align: center;
+    }
+    .banner-img {
+      margin: auto;
+    }
+    .lg\:flex {
+      display: block !important;
+    }
+  }
+  

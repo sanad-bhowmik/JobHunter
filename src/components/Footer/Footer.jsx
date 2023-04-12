@@ -4,7 +4,8 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='p-10 bg-neutral-900 text-white mt-20'>
+        <div className='p-10 bg-neutral-900 text-white mt-20 sm:pr-40 sm:bg-neutral-900 md:bg-neutral-900 lg:bg-neutral-900 xl:bg-neutral-900'>
+
             <footer className="footer container mx-auto pb-6">
                 <div >
                     <span className="text-5xl font-bold text-white mb-4">JobHunter</span>

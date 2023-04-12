@@ -20,11 +20,12 @@ const Jobdetails = () => {
     if (!jobDetails) {
         return <div>Loading.....</div>
     }
-    const handleApplyBtn = id => {
-        const jobCategory = jobCategorys.find(category => category.id === id);
-        console.log(jobCategory);
-      };
-      
+
+    const handleApplyNowClick = () => {
+        localStorage.setItem(jobDetails.id, JSON.stringify(jobDetails));
+        // Redirect to the "Application" page or any other page where the stored data will be shown
+        // You can use the useHistory hook from react-router-dom to achieve this.
+      }
     return (
         <section className='z-10'>
             <div className='h-[400px] jobDetails bg-gray-100'>
@@ -53,7 +54,8 @@ const Jobdetails = () => {
                     <p className='md-5 mb-6 font-bold'><FontAwesomeIcon className='text-slate-400 border-solid border-2 border-purple-300 rounded-xl px-1' icon={faPhone} /><span>Phone:</span><span className='text-gray-500 pl-2'>{jobDetails.ContactInfo[0]} </span></p>
                     <p className='md-5 mb-6  font-bold'><FontAwesomeIcon className='text-slate-400 px-1' icon={faEnvelope} /><span>Email:</span><span className='text-gray-500 pl-2'>{jobDetails.ContactInfo[1]} </span></p>
                     <p className='md-5 mb-6 font-bold'><FontAwesomeIcon className='text-slate-400 px-1' icon={faLocationDot} /><span>Address:</span><span className='text-gray-500 pl-2'>{jobDetails.address} </span></p>
-                    <button className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl'>Apply Now</button>
+                    {/* <button className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl'>Apply Now</button> */}
+                    <button className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl' onClick={handleApplyNowClick}>Apply Now</button>
                 </div>
             </div>
         </section>

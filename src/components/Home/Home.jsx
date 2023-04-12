@@ -73,7 +73,7 @@ const Home = () => {
                 </div>
             </section>
             {/* caegory end */}
-            <section>
+            <section className=''>
                 <h1 className='text-center text-3xl font-bold'>Featured Jobs</h1>
                 <p className='text-center mt-5'>Explore thousands of  jobs opportunities with all the information you need. It's your Future</p>
                 <div className='md:grid md:grid-cols-2 mt-5 ml-36'>
